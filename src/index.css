@@ -35,6 +35,8 @@ body {
   background: linear-gradient(180deg, #1a2332 0%, #0f1922 100%) !important;
   border-right: 1px solid #1e3a4c;
   box-shadow: 2px 0 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 10003;
 }
 
 .mce-toolbox-item {
@@ -447,4 +449,58 @@ body {
     opacity: 0.8;
     transform: scale(1.2);
   }
+}
+
+.add-image-button {
+  position: fixed;
+  bottom: 10px;
+  left: 50px;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f472b6 0%, #a78bfa 50%, #4fd1c5 100%);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow:
+    0 4px 20px rgba(244, 114, 182, 0.4),
+    0 8px 40px rgba(167, 139, 250, 0.3),
+    0 0 60px rgba(79, 209, 197, 0.2);
+  transition: all 0.3s ease;
+  z-index: 9998;
+  animation: festiveGlow 3s ease-in-out infinite;
+}
+
+@keyframes festiveGlow {
+  0%, 100% {
+    box-shadow:
+      0 4px 20px rgba(244, 114, 182, 0.4),
+      0 8px 40px rgba(167, 139, 250, 0.3),
+      0 0 60px rgba(79, 209, 197, 0.2);
+  }
+  50% {
+    box-shadow:
+      0 6px 30px rgba(244, 114, 182, 0.6),
+      0 12px 60px rgba(167, 139, 250, 0.5),
+      0 0 80px rgba(79, 209, 197, 0.4);
+  }
+}
+
+.add-image-button svg {
+  color: #ffffff;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.4));
+}
+
+.add-image-button:hover {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow:
+    0 6px 30px rgba(244, 114, 182, 0.6),
+    0 12px 60px rgba(167, 139, 250, 0.5),
+    0 0 100px rgba(79, 209, 197, 0.4);
+}
+
+.add-image-button:active {
+  transform: scale(0.95) rotate(-5deg);
 }

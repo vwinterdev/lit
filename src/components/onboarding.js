@@ -2,13 +2,13 @@ export class Onboarding {
   constructor(editor, container) {
     this.editor = editor
     this.container = container
+    this.targetButton = null
     this.elements = {
       overlay: null,
       spotlight: null,
       tooltip: null,
       arrow: null
     }
-    this.targetButton = null
   }
 
   show() {
@@ -50,12 +50,6 @@ export class Onboarding {
     document.body.appendChild(this.elements.overlay)
     document.body.appendChild(this.elements.tooltip)
     document.body.appendChild(this.elements.arrow)
-
-    const toolbox = this.targetButton.closest('.mce-toolbox')
-    if (toolbox) {
-      toolbox.style.position = 'relative'
-      toolbox.style.zIndex = '10001'
-    }
 
     this.targetButton.classList.add('onboarding-button-pulse')
 
@@ -150,11 +144,6 @@ export class Onboarding {
     })
 
     if (this.targetButton) {
-      const toolbox = this.targetButton.closest('.mce-toolbox')
-      if (toolbox) {
-        toolbox.style.position = ''
-        toolbox.style.zIndex = ''
-      }
       this.targetButton.classList.remove('onboarding-button-pulse')
       if (this.buttonClickHandler) {
         this.targetButton.removeEventListener('click', this.buttonClickHandler)

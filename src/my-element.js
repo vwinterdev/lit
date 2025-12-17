@@ -2,12 +2,14 @@ import { LitElement, html } from 'lit'
 import { Editor } from 'mini-canvas-editor';
 import 'mini-canvas-editor/css/editor.css';
 import { Onboarding } from './components/onboarding.js';
+import { AddImageButton } from './components/add-image-button.js';
 
 export class MyElement extends LitElement {
   constructor() {
     super()
     this.editor = null
     this.onboarding = null
+    this.addImageButton = null
   }
 
   createRenderRoot() {
@@ -17,7 +19,14 @@ export class MyElement extends LitElement {
   firstUpdated() {
     const container = this.querySelector('#canvas-editor-container')
     if (container) {
-      this.editor = Editor.createBlank(container, 800, 600, {})
+      this.editor = Editor.createBlank(container, 800, 800, {})
+
+      this.addImageButton = new AddImageButton(this.editor, () => {
+        if (this.onboarding) {
+          this.onboarding.hide()
+        }
+      })
+      this.addImageButton.create()
 
       setTimeout(() => {
         this.onboarding = new Onboarding(this.editor, container)
