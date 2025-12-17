@@ -9,9 +9,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tailwindcss/vite": "^4.1.18",
     "canvas-confetti": "^1.9.4",
+    "daisyui": "^5.5.14",
     "lit": "^3.3.1",
-    "mini-canvas-editor": "^0.3.2"
+    "mini-canvas-editor": "^0.3.2",
+    "tailwindcss": "^4.1.18"
   },
   "devDependencies": {
     "vite": "npm:rolldown-vite@7.2.5"

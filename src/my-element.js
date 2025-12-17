@@ -3,6 +3,8 @@ import { Editor } from 'mini-canvas-editor';
 import 'mini-canvas-editor/css/editor.css';
 import { Onboarding } from './components/onboarding.js';
 import { AddImageButton } from './components/add-image-button.js';
+import { unsafeCSS } from "lit";
+import globalStyles from "./index.css?inline";
 
 export class MyElement extends LitElement {
   constructor() {
@@ -11,6 +13,8 @@ export class MyElement extends LitElement {
     this.onboarding = null
     this.addImageButton = null
   }
+
+  static styles = [unsafeCSS(globalStyles)];
 
   createRenderRoot() {
     return this
