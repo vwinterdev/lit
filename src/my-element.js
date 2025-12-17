@@ -3,6 +3,7 @@ import { Editor } from 'mini-canvas-editor';
 import 'mini-canvas-editor/css/editor.css';
 import { Onboarding } from './components/onboarding.js';
 import { AddImageButton } from './components/add-image-button.js';
+import { SaveButton } from './components/save-button.js';
 import { unsafeCSS } from "lit";
 import globalStyles from "./index.css?inline";
 
@@ -12,6 +13,7 @@ export class MyElement extends LitElement {
     this.editor = null
     this.onboarding = null
     this.addImageButton = null
+    this.saveButton = null
   }
 
   static styles = [unsafeCSS(globalStyles)];
@@ -31,6 +33,9 @@ export class MyElement extends LitElement {
         }
       })
       this.addImageButton.create()
+
+      this.saveButton = new SaveButton(this.editor)
+      this.saveButton.create(container)
 
       setTimeout(() => {
         this.onboarding = new Onboarding(this.editor, container)

@@ -507,3 +507,16 @@ body {
 .add-image-button:active {
   transform: scale(0.95) rotate(-5deg);
 }
+
+.mce-toolbox-item.save-button {
+  margin-top: auto;
+  border-top: 1px solid #1e3a4c;
+}
+
+.mce-toolbox-item.save-button .mce-toolbox-item-icon svg path {
+  stroke: #10b981 !important;
+}
+
+.mce-toolbox-item.save-button:hover .mce-toolbox-item-icon svg path {
+  stroke: #34d399 !important;
+}
