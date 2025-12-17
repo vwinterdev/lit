@@ -47,7 +47,7 @@ export class AddImageButton {
 
   getRandomSvg() {
     const randomIndex = Math.floor(Math.random() * this.svgAssets.length)
-    return `/src/assets/decorations/${this.svgAssets[randomIndex]}`
+    return `/assets/decorations/${this.svgAssets[randomIndex]}`
   }
 
   getRandomPosition() {
