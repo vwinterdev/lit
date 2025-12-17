@@ -99,7 +99,8 @@ export class Onboarding {
     arrow.className = 'onboarding-arrow'
     arrow.style.cssText = `
       top: ${buttonRect.top + buttonRect.height / 2 - 12}px;
-      left: ${buttonRect.right + 8}px;
+      left: ${buttonRect.right - 10}px;
+      z-index: 1000002;
     `
     arrow.innerHTML = `
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
