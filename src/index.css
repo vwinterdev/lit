@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 
-/* Новогодняя тёмная тема */
 body {
   background: linear-gradient(135deg, #0a1929 0%, #1a2332 50%, #0f1419 100%);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -17,7 +16,6 @@ body {
   display: block;
 }
 
-/* Workspace - тёмный фон с голубым свечением */
 .mce-workspace {
   background: #0f1419 !important;
   background-image:
@@ -26,7 +24,6 @@ body {
   box-shadow: inset 0 0 100px rgba(56, 189, 248, 0.05);
 }
 
-/* Sidebar - тёмный с голубым градиентом */
 .mce-sidebar {
   background: linear-gradient(180deg, #1a2332 0%, #0f1922 100%) !important;
   color: #94d2e6 !important;
@@ -34,14 +31,12 @@ body {
   box-shadow: -2px 0 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Toolbox - тёмный с акцентами */
 .mce-toolbox {
   background: linear-gradient(180deg, #1a2332 0%, #0f1922 100%) !important;
   border-right: 1px solid #1e3a4c;
   box-shadow: 2px 0 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Toolbox items */
 .mce-toolbox-item {
   background: transparent !important;
   color: #4fd1c5 !important;
@@ -68,7 +63,6 @@ body {
   fill: #38bdf8 !important;
 }
 
-/* Toolbar - тёмный новогодний стиль */
 .mce-toolbar {
   background: linear-gradient(90deg, #1a2332 0%, #0f1922 100%) !important;
   color: #94d2e6 !important;
@@ -102,7 +96,6 @@ body {
   border-color: #4fd1c5 !important;
 }
 
-/* Panel tabs */
 .mce-panel-tabs {
   background: #0a1520 !important;
   border-bottom: 2px solid #1e3a4c;
@@ -121,7 +114,6 @@ body {
   transform: translateY(-2px);
 }
 
-/* Layers panel items */
 .mce-layers-panel-item {
   border-bottom: 1px solid #1e3a4c !important;
   transition: all 0.2s ease;
@@ -141,7 +133,6 @@ body {
   color: #94d2e6 !important;
 }
 
-/* Properties editor */
 .mce-properties-editor {
   background: transparent !important;
 }
@@ -175,7 +166,6 @@ body {
   box-shadow: 0 0 0 3px rgba(79, 209, 197, 0.2);
 }
 
-/* Icon buttons */
 .mce-icon-button.mce-icon-button-sm svg path {
   fill: #4fd1c5 !important;
 }
@@ -184,13 +174,11 @@ body {
   fill: #38bdf8 !important;
 }
 
-/* Zoom indicator */
 .mce-toolbox-item-zoom {
   color: #4fd1c5 !important;
   font-weight: 600;
 }
 
-/* Sidebar switch for mobile */
 .mce-mobile .mce-sidebar-switch {
   background: linear-gradient(135deg, #1a2332 0%, #0f1922 100%) !important;
   border: 1px solid #1e3a4c;
@@ -201,13 +189,11 @@ body {
   fill: #4fd1c5 !important;
 }
 
-/* Panel empty state */
 .mce-panel-empty {
   color: #5a738c !important;
   font-style: italic;
 }
 
-/* Scrollbar styling */
 .mce-panel-body::-webkit-scrollbar,
 .mce-sidebar-body::-webkit-scrollbar {
   width: 8px;
@@ -229,7 +215,6 @@ body {
   background: #4fd1c5;
 }
 
-/* Новогодние снежинки (декоративный эффект) */
 @keyframes snowfall {
   0% {
     transform: translateY(-10px) rotate(0deg);
@@ -247,7 +232,6 @@ body {
   }
 }
 
-/* Custom layer icons styling */
 .custom-layer-icon {
   filter: drop-shadow(0 1px 3px rgba(79, 209, 197, 0.3));
 }
@@ -260,7 +244,6 @@ body {
   color: #38bdf8 !important;
 }
 
-/* Onboarding - подсказка для пользователя */
 .onboarding-overlay {
   position: fixed;
   top: 0;
@@ -271,20 +254,6 @@ body {
   z-index: 9999;
   animation: overlayFadeIn 0.4s ease-out;
   cursor: pointer;
-}
-
-.onboarding-spotlight {
-  position: fixed;
-  z-index: 10000;
-  border-radius: 8px;
-  box-shadow:
-    0 0 0 4px rgba(79, 209, 197, 0.6),
-    0 0 0 8px rgba(79, 209, 197, 0.3),
-    0 0 40px rgba(79, 209, 197, 0.8),
-    inset 0 0 20px rgba(79, 209, 197, 0.2);
-  animation: spotlightPulse 2s ease-in-out infinite, overlayFadeIn 0.4s ease-out;
-  pointer-events: none;
-  background: radial-gradient(circle, rgba(79, 209, 197, 0.1) 0%, transparent 70%);
 }
 
 .onboarding-tooltip {
